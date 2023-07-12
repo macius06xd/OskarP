@@ -1,5 +1,8 @@
 import unittest
 
+from PriorityQueue import PriorityQueue
+
+
 class PriorityQueueTests(unittest.TestCase):
     def setUp(self):
         self.queue = PriorityQueue()
