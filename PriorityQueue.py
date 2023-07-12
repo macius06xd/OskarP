@@ -1,6 +1,6 @@
 class PriorityQueue:
     def __init__(self):
-
+        # each element should be stored as a tuple (item,priority)
         self.items = []
 
     def is_empty(self):
