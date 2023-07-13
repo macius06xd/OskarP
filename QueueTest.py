@@ -25,9 +25,9 @@ class PriorityQueueTests(unittest.TestCase):
         self.queue.enqueue('A', 1)
         self.assertEqual('A', self.queue.peek())
         self.queue.enqueue('B', 3)
-        self.assertEqual('A', self.queue.peek())
+        self.assertEqual('B', self.queue.peek())
         self.queue.enqueue('C', 2)
-        self.assertEqual('A', self.queue.peek())
+        self.assertEqual('B', self.queue.peek())
 
     def test_dequeue(self):
         self.queue.enqueue('A', 1)
@@ -41,9 +41,11 @@ class PriorityQueueTests(unittest.TestCase):
         self.queue.enqueue('A', 1)
         self.assertEqual('A', self.queue.peek())
         self.queue.enqueue('B', 3)
-        self.assertEqual('A', self.queue.peek())
+        self.assertEqual('B', self.queue.peek())
         self.queue.enqueue('C', 2)
-        self.assertEqual('A', self.queue.peek())
+        self.assertEqual('B', self.queue.peek())
+        self.queue.enqueue('D', 8)
+        self.assertEqual('D', self.queue.peek())
 
 if __name__ == '__main__':
     unittest.main()
